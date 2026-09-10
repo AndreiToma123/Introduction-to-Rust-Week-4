@@ -3,7 +3,7 @@ use std::fs;
 use std::fs::File;
 use std::io::{self, Read, Write};
 
-fn write_in_file(filename: & String, content: &String) -> io::Result<()> {
+fn write_in_file(filename: &String, content: &String) -> io::Result<()> {
     let mut file = File::create(filename)?;
     file.write_all(content.as_bytes())
 }
